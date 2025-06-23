@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Voice Agent</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-image: url('a.jpg'); /* ✅ Local background */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+
+            /* 👇 Zoom out the page so the widget appears bigger */
+            zoom: 170%; /* You can adjust to 70%, 80% as needed */
+        }
+
+        elevenlabs-convai {
+            margin-top: 150px;
+        }
+    </style>
+</head>
+<body>
+
+<h1></h1>
+
+<elevenlabs-convai agent-id="agent_01jycwg31aecxr6b09zhy59pvn"></elevenlabs-convai>
+<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+</body>
+</html>
