@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Voice Agent</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
-            height: 80%;
+            height: 100%;
             background-image: url('a.jpg'); /* ✅ Local background */
             background-size: cover;
             background-position: center;
@@ -17,14 +18,37 @@
             align-items: center;
             flex-direction: column;
             color: white;
+        }
 
-            /* 👇 Zoom out the page so the widget appears bigger */
-            zoom: 125%; /* You can adjust to 70%, 80% as needed */
+        /* Desktop styles (screens larger than 768px) */
+        @media screen and (min-width: 768px) {
+            body {
+                zoom: 120%;
+            }
+
+            elevenlabs-convai {
+                margin-top: 120px;
+            }
         }
-             elevenlabs-convai {
-            margin-top: 150px;
+
+        /* Mobile styles (screens smaller than 768px) */
+        @media screen and (max-width: 767px) {
+            body {
+                zoom: 100%;
+                padding: 20px;
+            }
+
+            elevenlabs-convai {
+                margin-top: 60px;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            h1 {
+                font-size: 24px;
+                text-align: center;
+            }
         }
-      
     </style>
 </head>
 <body>
@@ -32,7 +56,7 @@
 <h1></h1>
 
 <elevenlabs-convai agent-id="agent_01jycwg31aecxr6b09zhy59pvn"></elevenlabs-convai>
-    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script></body>
+<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 
 </body>
 </html>
